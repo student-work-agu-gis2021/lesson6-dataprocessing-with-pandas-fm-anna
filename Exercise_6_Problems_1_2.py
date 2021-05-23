@@ -31,6 +31,7 @@ print(data)
 
 tavg_nodata_count = None
 #YOUR CODE HERE 2
+tavg_nodata_count = data.iloc[:,6].isnull().num()
 
 
 #CAUTION!!! DON'T EDIT THIS PART START
