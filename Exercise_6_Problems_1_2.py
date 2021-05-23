@@ -115,7 +115,8 @@ print('Average temperature (F) for the whole dataset:', round(avg_temp, 2))
 avg_temp_1969 = None
 
 # YOUR CODE HERE 8
-avg_temp_1969 = np.mean(data.iloc[:,7])
+data8 = data.query('19690501<=DATE<=19690831')
+avg_temp_1969 = data8['TMAX'].mean()
 
 #CAUTION!!! DON'T EDIT THIS PART START
 # This test print should print a number
