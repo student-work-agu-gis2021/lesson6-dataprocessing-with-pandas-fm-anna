@@ -20,7 +20,9 @@ data = None
 fp = "data/1091402.txt"
 
 data = pd.read_csv(fp,delim_whitespace = True, skiprows = [1],na_values =[-9999])
-print(data)
+print(data.head())
+print(data.tail())
+
 
 # ### Part 2 
 # 
@@ -45,6 +47,7 @@ print('Number of no-data values in column "TAVG":',tavg_nodata_count)
 
 tmin_nodata_count = None
 #YOUR CODE HERE 3
+tmin_nodata_count = data.iloc[:,8].isnull().num()
 
 #CAUTION!!! DON'T EDIT THIS PART START
 # Print out the solution:
